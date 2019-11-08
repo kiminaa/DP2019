@@ -61,6 +61,73 @@
             .container:nth-child(2){background-color: #5d9;}
             .container:nth-child(3){background-color: #f76;}
             .container:nth-child(4){background-color: #ec5;}
+            .content_part{
+                float: left; /*둥둥떠다니게 : 왼쪽으로*/
+                width: 480px;
+                margin: 10px;
+            }
+
+            .container>section>h3{
+                color: white;
+            }
+
+            .container dt{
+                font-weight: bold;
+                margin-top: 25px;
+                margin-left: 0px;
+                margin-right: 25px;
+                margin-bottom: 25px;
+                margin: 25px; /*네 방향 모두*/
+                margin: 25px 0px;/*상하 좌우*/
+                margin: 25px 0px 25px 0px; /*상 우 하 좌 / 제일 마지막에 적은것만 적용*/
+
+            }
+
+            .container dd{
+                margin: 0px; /*바깥여백없음 글들이 들여쓰기 된거 해결하는고*/
+            }
+
+            .container>section{
+                /*margin-left: 180px;*/
+                width: 1000px; /*이미지크기랑 마진 값 모두 더해서 480(이미지크기)+10(좌 여백)+10(우 여백)=200/ 2개 / 1000px*/
+                margin-left: auto; /*바깥여백: 자동*/
+                margin-right: auto; /*바깥여백: 자동*/
+            }
+
+            .container{
+                padding: 30px;
+            }
+
+            footer li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+
+            footer ul{
+                padding: 0px;
+            }
+
+            footer{
+                background-color: #999;
+                padding: 30px;
+            }
+
+            header{
+                margin: 30px;
+            }
+
+            nav{
+                padding: 30px;
+            }
+
+            #wrap{
+                /* width: 1100px; */ /*고정값*/
+                min-width: 1100px; /*최소넓이*/
+                max-width: 1920px; /*최대넓이*/
+                margin-left: auto;
+                margin-right: auto;
+            }
         </style>
     </head>
 
@@ -96,8 +163,9 @@
                         <li>Misc</li>
                         <div class="clear"></div>
                     </ul>
+                    <div class="clear"></div>
                 </nav>
-                <div class="clear"></div>
+                
                 <div>
                     <div class="container">
                         <section>
@@ -124,6 +192,7 @@
                                         </dd>
                                     </dl>
                                 </div>
+                                <div class="clear"></div>
                         </section>
                     </div>
                 
@@ -152,6 +221,7 @@
                                         </dd>
                                     </dl>
                                 </div>
+                                <div class="clear"></div>
                             </section>
                         </div>
 
@@ -180,6 +250,7 @@
                                         </dd>
                                     </dl>
                                 </div>
+                                <div class="clear"></div>
                             </section>
                         </div>        
 
@@ -208,13 +279,40 @@
                                         </dd>
                                     </dl>
                                 </div>
+                                <div class="clear"></div>
                             </section>
                         </div>    
 
                 
 
                 </div>
-                <footer>footer</footer>
+                <footer>
+                    <div calss="float_left">
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Services</li>
+                            <li>Work</li>
+                            <li>Blog</li>
+                            <li>Contant us</li>
+                            <div class="clear"></div>
+                        </ul>
+                        <div>ⓒ 2013 BlueBox. All Right Reserved.</div>
+                        <div>
+                            the loges in the design are the property of their respective owners/copyright holders.
+                        </div>
+                    </div> <!--이걸 하면 왼쪽 부분 오른똑 부분 영역을 나눌 수 있음-->
+                    <ul class="float_right">
+                        <li><img src="IMAGES/layout1_footer_icon1.png"></li>
+                        <li><img src="IMAGES/layout1_footer_icon2.png"></li>
+                        <li><img src="IMAGES/layout1_footer_icon3.png"></li>
+                        <li><img src="IMAGES/layout1_footer_icon4.png"></li>
+                        <li><img src="IMAGES/layout1_footer_icon5.png"></li>
+                        <li><img src="IMAGES/layout1_footer_icon6.png"></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </footer>
             </div>
 
         </div>

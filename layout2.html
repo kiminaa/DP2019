@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout2</title>
+        <meta charset="utf=8" />
+        <style>
+            header{
+                background-color: #02918c;
+                color: white; /*상속이라는 개념으로 부모관계/ 글자색같은 경우 부모쪽에서 글자 색 지정하면 자식들이 따라가는 경우*/
+            }
+
+            #logo_back{
+                color: #cfc91d;
+            }
+
+            header>nav>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+
+            .clear { clear:both; height:0; overflow:hidden; }
+            .float_left { float:left; }
+            .float_right { float:right; }
+
+            header>h1{
+                margin: 0px;
+            }
+
+            #main_visual{
+                height: 500px;
+                background-image: url("IMAGES/layout2_visual.jpg");
+                background-size: 100% auto ; /*가로는 200으로 할건데 세로는 오토로 자동으로 조절해주라*/
+                background-size: cover;
+                background-repeat: no-repeat;
+                /* repeat반복한다, no-repeat 반복안한다 repeat-x x좌표로 반복 y는 y좌표로 반복*/
+                background-color: black;
+                background-position: 50% 50%; /*가로 세로 50%는 가운데 그림을 가로 기준으로 가운데 세로를 세로 기준으로 가운데*/
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <h1 class="float_left">
+                    <span>MY</span><span id="logo_back">POLIO</span>
+                    <!-- div랑 span 의미없이 구획, 영역 나누기 좋음
+                    div는 블록형 테그 / span을 하면 줄내림안됨, 인라인형태 테그-->
+                </h1>
+                <nav class="float_right">
+                    <ul>
+                        <li>HOME</li>
+                        <li>ABOUT ME</li>
+                        <li>SERVICE</li>
+                        <li>MY WORK</li>
+                        <li>CONTACT ME</li>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </header>
+            <div id=main_visual></div>
+            <div>content1</div>
+            <div>content1</div>
+        </div>
+    </body>
+</html>
